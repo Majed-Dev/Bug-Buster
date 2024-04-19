@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Experimental.AI;
 
 [System.Serializable]
 public class Word
 {
+
     public string word;
 
     private int typeIndex;
 
-    public Word(string word)
+    private Bug bug;
+
+    public Word(string word, Bug bug)
     {
         this.word = word;
         typeIndex = 0;
+
+        this.bug = bug;
+        bug.SetWord(word);
     }
     public char GetNextLetter()
     {
@@ -21,6 +29,7 @@ public class Word
     public void TypeLetter()
     {
         typeIndex++;
+        bug.RemoveLetter();
         
     }
     public bool WordTyped()
@@ -29,7 +38,7 @@ public class Word
 
         if(typeIndex >=word.Length)
         {
-            //remove the word on screen
+            bug.BustBug();
         }
         return (typeIndex >= word.Length);
     }

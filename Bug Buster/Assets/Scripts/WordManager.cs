@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WordManager : MonoBehaviour
@@ -9,14 +11,16 @@ public class WordManager : MonoBehaviour
     private bool hasActiveWord;
     private Word activeWord;
 
+    public BugSpawner bugSpawner;
+
     private void Start()
     {
-
+       bugSpawner = gameObject.GetComponent<BugSpawner>();
     }
 
     public void AddWord()
     {
-        Word word = new Word(WordGenerater.GetRandomWord());
+        Word word = new Word(WordGenerater.GetRandomWord(),bugSpawner.SpawnBug());
         words.Add(word);
     }
     public void TypeLetter(char letter)
@@ -45,6 +49,7 @@ public class WordManager : MonoBehaviour
         {
             hasActiveWord = false;
             words.Remove(activeWord);
+           
         }
     }
 }
