@@ -13,6 +13,7 @@ public class Word
     private int typeIndex;
 
     private Bug bug;
+    private bool bugRunning = false;
 
     public Word(string word, Bug bug)
     {
@@ -30,6 +31,12 @@ public class Word
     {
         typeIndex++;
         bug.RemoveLetter();
+        if (!bugRunning)
+        {
+            bug.bugSpeed*= 3f;
+            bugRunning = true;
+        }
+
         
     }
     public bool WordTyped()

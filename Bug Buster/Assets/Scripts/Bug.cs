@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Bug : MonoBehaviour
 {
-    [SerializeField] private float bugSpeed = 1f;
+    public float bugSpeed = 1f;
     public TextMeshPro text;
 
     private void Start()

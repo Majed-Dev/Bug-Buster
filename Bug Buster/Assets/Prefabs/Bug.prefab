@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59527b39fe249246adc3052c7556e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bugSpeed: 1
+  bugSpeed: 3
   text: {fileID: 6023569678592955155}
 --- !u!23 &6988440306911134805
 MeshRenderer:
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.64654016, y: -0.079167366, z: 0.686124, w: 1.8604519}
+  m_margin: {x: 0.05198735, y: -0.079167366, z: 0.09157139, w: 1.8604519}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
