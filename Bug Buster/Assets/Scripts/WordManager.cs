@@ -16,6 +16,7 @@ public class WordManager : MonoBehaviour
     private void Start()
     {
        bugSpawner = gameObject.GetComponent<BugSpawner>();
+        AddWord();
     }
 
     public void AddWord()
@@ -25,12 +26,9 @@ public class WordManager : MonoBehaviour
     }
     public void TypeLetter(char letter)
     {
-        if(hasActiveWord)
+        if(hasActiveWord && activeWord.GetNextLetter()==letter)
         {
-            if (activeWord.GetNextLetter() == letter)
-            {
                 activeWord.TypeLetter();
-            }
         }
         else
         {

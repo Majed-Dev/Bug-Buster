@@ -13,7 +13,6 @@ public class WordInput : MonoBehaviour
     {
         foreach(char letter in Input.inputString)
         {
-            print(letter);
             wordManager.TypeLetter(letter);
         }
     }
