@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6800175272003117092}
-  - component: {fileID: 4437378390413617863}
   - component: {fileID: 6988440306911134805}
   - component: {fileID: 6023569678592955155}
+  - component: {fileID: 2583377222734320160}
   m_Layer: 0
   m_Name: Bug
   m_TagString: Untagged
@@ -27,7 +27,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4130305295845943088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.061478637}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36,23 +36,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.18, y: 2.9}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2.625, y: 2.625}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4437378390413617863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4130305295845943088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e59527b39fe249246adc3052c7556e85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bugSpeed: 3
-  text: {fileID: 6023569678592955155}
 --- !u!23 &6988440306911134805
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -178,7 +164,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.05198735, y: -0.079167366, z: 0.09157139, w: 1.8604519}
+  m_margin: {x: -0.0798133, y: -0.079167366, z: -0.17202967, w: 1.8604519}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -187,6 +173,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6988440306911134805}
   m_maskType: 0
+--- !u!114 &2583377222734320160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130305295845943088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59527b39fe249246adc3052c7556e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugSpeed: 3
+  text: {fileID: 6023569678592955155}
 --- !u!1 &7167431989774381628
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.05, y: 1.01, z: -0.061478637}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6800175272003117092}

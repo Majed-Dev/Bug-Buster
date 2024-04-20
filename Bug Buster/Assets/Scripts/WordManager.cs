@@ -8,8 +8,8 @@ public class WordManager : MonoBehaviour
 {
     public List<Word> words;
 
-    private bool hasActiveWord;
-    private Word activeWord;
+    public bool hasActiveWord;
+    public Word activeWord;
 
     public BugSpawner bugSpawner;
 
@@ -53,6 +53,7 @@ public class WordManager : MonoBehaviour
         {
             hasActiveWord = false;
             words.Remove(activeWord);
+            activeWord = null;
         }
     }
 

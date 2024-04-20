@@ -374,6 +374,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words: []
+  activeWord:
+    word: 
+    bug: {fileID: 0}
   bugSpawner: {fileID: 1298164663}
   spawnCooldown: 1
 --- !u!4 &1298164661
@@ -503,7 +506,7 @@ GameObject:
   m_Layer: 0
   m_Name: pos3
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -534,7 +537,7 @@ GameObject:
   m_Layer: 0
   m_Name: pos2
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -565,7 +568,7 @@ GameObject:
   m_Layer: 0
   m_Name: pos1
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

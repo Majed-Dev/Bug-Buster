@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
 
@@ -8,10 +9,12 @@ public class Bug : MonoBehaviour
 {
     public float bugSpeed = 1f;
     public TextMeshPro text;
+    WordManager wm;
 
     private void Start()
     {
         text = gameObject.GetComponent<TextMeshPro>();
+        wm = GameObject.FindObjectOfType<WordManager>();
     }
     void Update()
     {
@@ -20,6 +23,13 @@ public class Bug : MonoBehaviour
     private void movement()
     {
         transform.Translate(Vector2.down * bugSpeed * Time.deltaTime);
+        if (transform.position.y <= Camera.main.transform.position.y - 7)
+        {
+            //hurt the player
+            wm.hasActiveWord = false;
+            wm.words.RemoveAt(0);
+            BustBug();
+        }
     }
     public void SetWord(string word)
     {

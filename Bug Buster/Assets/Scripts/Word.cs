@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Experimental.AI;
 
@@ -12,7 +13,7 @@ public class Word
 
     private int typeIndex;
 
-    private Bug bug;
+    public Bug bug;
     private bool bugRunning = false;
 
     public Word(string word, Bug bug)
@@ -22,6 +23,14 @@ public class Word
 
         this.bug = bug;
         bug.SetWord(word);
+
+        //making bigger words slower and bigger
+        if(this.word.Length >= 7)
+        {
+            bug.bugSpeed /= 3;
+            //make the sprite bigger
+            bug.transform.localScale *= 2;
+        }
     }
     public char GetNextLetter()
     {
@@ -43,6 +52,7 @@ public class Word
     {
         if(typeIndex >=word.Length)
         {
+            // increase score
             bug.BustBug();
         }
         return (typeIndex >= word.Length);
