@@ -5,14 +5,11 @@ using UnityEngine;
 public class BugSpawner : MonoBehaviour
 {
     public GameObject bugPrefab;
+    [SerializeField] List<Transform> spawnPos;
     public Bug SpawnBug()
     {
-        GameObject bugObj = Instantiate(bugPrefab);
-
+        int spawnPosIndex = Random.Range(0, spawnPos.Count);
+        GameObject bugObj = Instantiate(bugPrefab, spawnPos[spawnPosIndex]);
         return bugObj.GetComponent<Bug>();
-    }
-    public void SpawnBug(Transform transform)
-    {
-        Instantiate(bugPrefab,transform);
     }
 }
