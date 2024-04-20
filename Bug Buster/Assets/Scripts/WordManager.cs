@@ -13,12 +13,18 @@ public class WordManager : MonoBehaviour
 
     public BugSpawner bugSpawner;
 
+    public float spawnCooldown = 1.5f;
+    private float lastSpawnTime;
+
     private void Start()
     {
        bugSpawner = gameObject.GetComponent<BugSpawner>();
-        AddWord();
     }
-
+    private void Update()
+    {
+        Spawning();
+    }
+    
     public void AddWord()
     {
         Word word = new Word(WordGenerater.GetRandomWord(),bugSpawner.SpawnBug());
@@ -47,7 +53,17 @@ public class WordManager : MonoBehaviour
         {
             hasActiveWord = false;
             words.Remove(activeWord);
-           
+        }
+    }
+
+    private void Spawning()
+    {
+        if (Time.time < spawnCooldown + lastSpawnTime)
+            return;
+        else
+        {
+            lastSpawnTime = Time.time;
+            AddWord();
         }
     }
 }

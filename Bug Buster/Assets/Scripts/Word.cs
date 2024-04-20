@@ -34,8 +34,6 @@ public class Word
     }
     public bool WordTyped()
     {
-
-
         if(typeIndex >=word.Length)
         {
             bug.BustBug();
