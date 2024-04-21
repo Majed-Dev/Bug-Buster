@@ -10,11 +10,13 @@ public class Bug : MonoBehaviour
     public float bugSpeed = 1f;
     public TextMeshPro text;
     WordManager wm;
+    Health health;
 
     private void Start()
     {
         text = gameObject.GetComponent<TextMeshPro>();
         wm = GameObject.FindObjectOfType<WordManager>();
+        health = GameObject.Find("Health").GetComponent<Health>();
     }
     void Update()
     {
@@ -26,6 +28,7 @@ public class Bug : MonoBehaviour
         if (transform.position.y <= Camera.main.transform.position.y - 7)
         {
             //hurt the player
+            health.health--;
             wm.hasActiveWord = false;
             wm.words.RemoveAt(0);
             BustBug();
