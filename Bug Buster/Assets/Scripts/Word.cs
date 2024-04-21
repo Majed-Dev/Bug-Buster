@@ -16,11 +16,15 @@ public class Word
     public Bug bug;
     private bool bugRunning = false;
 
+    public ScoreManager scoreManager;
+
+
     public Word(string word, Bug bug)
     {
         this.word = word;
         typeIndex = 0;
 
+        scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
         this.bug = bug;
         bug.SetWord(word);
 
@@ -53,6 +57,7 @@ public class Word
         if(typeIndex >=word.Length)
         {
             // increase score
+            scoreManager.score++;
             bug.BustBug();
         }
         return (typeIndex >= word.Length);
