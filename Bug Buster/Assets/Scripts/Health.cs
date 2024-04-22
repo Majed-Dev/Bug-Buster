@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
     {
         if(health <= 0)
         {
-            SceneManager.LoadScene("Gameplay");
+            SceneManager.LoadScene("Main Menu");
         }
         SpriteSwap();   
     }

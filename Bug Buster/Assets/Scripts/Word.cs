@@ -58,6 +58,11 @@ public class Word
         {
             // increase score
             scoreManager.score++;
+            //set highest score
+            if (PlayerPrefs.GetInt("Hscore") < scoreManager.score)
+            {
+                PlayerPrefs.SetInt("Hscore",scoreManager.score);
+            }
             bug.BustBug();
         }
         return (typeIndex >= word.Length);
