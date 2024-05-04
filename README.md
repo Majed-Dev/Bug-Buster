@@ -31,7 +31,7 @@ Exterminator is a game where you eliminate bugs using programming keywords.
 ## Where To Play🌐
 Download for Windows or play online on https://majedev.itch.io/ Choose your platform and start exterminating bugs!
 
-## Demo
+## Gameplay
 
 put a gif later
 
