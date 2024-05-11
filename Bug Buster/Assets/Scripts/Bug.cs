@@ -15,7 +15,7 @@ public class Bug : MonoBehaviour
     private void Start()
     {
         text = gameObject.GetComponent<TextMeshPro>();
-        wm = GameObject.FindObjectOfType<WordManager>();
+        wm = GameObject.FindFirstObjectByType<WordManager>();
         health = GameObject.Find("Health").GetComponent<Health>();
     }
     void Update()
@@ -25,6 +25,8 @@ public class Bug : MonoBehaviour
     private void movement()
     {
         transform.Translate(Vector2.down * bugSpeed * Time.deltaTime);
+
+        //when the bug moves down the camera
         if (transform.position.y <= Camera.main.transform.position.y - 7)
         {
             //hurt the player
@@ -45,6 +47,7 @@ public class Bug : MonoBehaviour
     }
     public void BustBug()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.bugDeath);
         Destroy(gameObject);
     }
 }

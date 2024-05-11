@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class WordManager : MonoBehaviour
 {
+    public static WordManager Instance;
     public List<Word> words;
 
     public bool hasActiveWord;
@@ -18,6 +19,7 @@ public class WordManager : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
        bugSpawner = gameObject.GetComponent<BugSpawner>();
     }
     private void Update()
@@ -35,6 +37,7 @@ public class WordManager : MonoBehaviour
         if(hasActiveWord && activeWord.GetNextLetter()==letter)
         {
                 activeWord.TypeLetter();
+                AudioManager.Instance.PlayKeyboardSFX();
         }
         else
         {
@@ -66,5 +69,6 @@ public class WordManager : MonoBehaviour
             lastSpawnTime = Time.time;
             AddWord();
         }
+    
     }
-}
+}   

@@ -16,4 +16,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
     }
+    public void HandleDropdonw(int index)
+    {
+        WordGenerater.languageIndex = index;
+    }
 }

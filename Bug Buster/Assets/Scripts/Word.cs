@@ -31,7 +31,7 @@ public class Word
         //making bigger words slower and bigger
         if(this.word.Length >= 7)
         {
-            bug.bugSpeed /= 3;
+            bug.bugSpeed /= 2;
             //make the sprite bigger
             bug.transform.localScale *= 2;
         }
@@ -46,7 +46,7 @@ public class Word
         bug.RemoveLetter();
         if (!bugRunning)
         {
-            bug.bugSpeed*= 3f;
+            bug.bugSpeed*= 1.5f;
             bugRunning = true;
         }
 
